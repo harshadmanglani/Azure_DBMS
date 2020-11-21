@@ -11,11 +11,11 @@ declare continue handler for not found set j = 0;
 open s;
 
 while j = 1 do
-fetch s into m
+fetch s into m;
 if m >= 20 then
-update consists_of set big_quantity = 'YES' where quantity = m;
+update consists_of set large_order = 'YES' where quantity = m;
 else
-update consists_of set big_quantity = 'NO' where quantity = m;
+update consists_of set large_order = 'NO' where quantity = m;
 end if;
 end while;
 close s;
